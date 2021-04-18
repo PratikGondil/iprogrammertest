@@ -2,7 +2,7 @@ package com.iprogrammer.modules.apirepository.repositories.frameworkrequest.whea
 import com.iprogrammer.modules.apirepository.IWheatherDataRepository
 import com.iprogrammer.modules.apirepository.repositories.apicallbacks.user.response.IGetWheatherDataResponse
 import com.google.gson.Gson
-import com.iprogrammer.modules.apirepository.repositories.model.wheather.objWheatherData
+import com.iprogrammer.modules.apirepository.repositories.model.wheather.response.ObjWheatherDetails
 import com.iprogrammer.modules.apirepository.utils.BaseConstat
 import kotlincodes.com.retrofitwithkotlin.retrofit.ApiClient
 import retrofit2.Call
@@ -13,19 +13,20 @@ import retrofit2.Response
 object WheatherDataRepository : IWheatherDataRepository {
 
     lateinit var iGetWheatherDataResponse: IGetWheatherDataResponse
-    private fun getStatData(startdate: String, endDate: String) {
-        val call: Call<objWheatherData> = ApiClient.getClient.getWheatherData(startdate,endDate,BaseConstat.API_KEY)
-        call.enqueue(object : Callback<objWheatherData> {
+    private fun getWheatherData(cityName: String) {
+        val call: Call<ObjWheatherDetails> = ApiClient.getClient.getWheatherData(cityName,
+            BaseConstat.API_KEY)
+        call.enqueue(object : Callback<ObjWheatherDetails> {
 
             override fun onResponse(
-                call: Call<objWheatherData>,
-                response: Response<objWheatherData>
+                call: Call<ObjWheatherDetails>,
+                response: Response<ObjWheatherDetails>
             ) {
-                var objUserResponse:objWheatherData = response.body()!!
+                var objUserResponse:ObjWheatherDetails = response.body()!!
                 iGetWheatherDataResponse.onSuccessResponse(objUserResponse,false)
             }
 
-            override fun onFailure(call: Call<objWheatherData>?, t: Throwable?) {
+            override fun onFailure(call: Call<ObjWheatherDetails>?, t: Throwable?) {
                 iGetWheatherDataResponse.onFailureResponse()
 
             }
@@ -33,22 +34,22 @@ object WheatherDataRepository : IWheatherDataRepository {
         })
     }
 
+
     override fun apiWheatherDataReq(
         wheatherDataResponseListener: IGetWheatherDataResponse,
-        startdate: String,
-        endDate: String
+        cityName: String
     ) {
 
         this.iGetWheatherDataResponse = wheatherDataResponseListener
-        getStatData(startdate,endDate)
+        getWheatherData(cityName)
 
     }
 
 
-    fun getDeserializeResponse(response: String): objWheatherData? {
+    fun getDeserializeResponse(response: String): ObjWheatherDetails? {
         return Gson().fromJson(
             response,
-                objWheatherData::class.java
+            ObjWheatherDetails::class.java
         )
     }
 

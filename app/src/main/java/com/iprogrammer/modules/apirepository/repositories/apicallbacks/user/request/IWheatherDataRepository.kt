@@ -9,8 +9,7 @@ interface IWheatherDataRepository {
 
     fun apiWheatherDataReq(
         wheatherDataResponseListener: IGetWheatherDataResponse,
-        date: String,
-        endDate: String
+        date: String
     )
 
 

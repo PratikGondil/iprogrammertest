@@ -1,6 +1,6 @@
 package com.iprogrammer.modules.covidstatmodule.uiListner
 
-interface IUserDataView {
+interface IWheatherView {
     fun callGetWheatherApi(nextDate: String)
-    fun callDatePicker()
+    fun searchWheatherData()
 }

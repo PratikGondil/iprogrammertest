@@ -2,5 +2,5 @@ package com.iprogrammer.modules.apirepository.utils
 
 object BaseConstat {
 
-    const val API_KEY ="90b00d5ea1b24fa0b9789f0c60c34d3e"
+    const val API_KEY ="094aa776d64c50d5b9e9043edd4ffd00"
 }

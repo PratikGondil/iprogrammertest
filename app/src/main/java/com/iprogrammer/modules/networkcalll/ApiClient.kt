@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
 
-    var BASE_URL:String="https://api.weatherbit.io/"
+    var BASE_URL:String="http://api.openweathermap.org/"
     val getClient: ApiInterface
         get() {
 

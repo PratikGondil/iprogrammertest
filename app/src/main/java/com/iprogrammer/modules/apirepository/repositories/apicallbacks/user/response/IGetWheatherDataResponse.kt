@@ -1,10 +1,11 @@
 package com.iprogrammer.modules.apirepository.repositories.apicallbacks.user.response
 import com.iprogrammer.modules.apirepository.repositories.model.wheather.objWheatherData
+import com.iprogrammer.modules.apirepository.repositories.model.wheather.response.ObjWheatherDetails
 
 
 interface IGetWheatherDataResponse {
     fun onSuccessResponse(
-        response: objWheatherData?,
+        response: ObjWheatherDetails?,
         isError: Boolean
     )
     fun onFailureResponse()

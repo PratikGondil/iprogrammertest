@@ -9,7 +9,7 @@ import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.iprogrammer.modules.userdatamodule.view.fragment.WheatherForecastFragment
+import com.iprogrammer.modules.userdatamodule.view.fragment.WheatherDetailsFragment
 import com.iprogrammer.modules.userdatamodule.viewmodel.WheatherDataViewModel
 import org.junit.Before
 import org.junit.Rule
@@ -31,7 +31,7 @@ class WheatherDataTest {
     fun setUp() {
         MockitoAnnotations.initMocks(this)
 
-        launchFragmentInContainer<WheatherForecastFragment>(
+        launchFragmentInContainer<WheatherDetailsFragment>(
             fragmentArgs = null, // Bundle
             themeResId = R.style.AppTheme,
             factory = null // FragmentFactory

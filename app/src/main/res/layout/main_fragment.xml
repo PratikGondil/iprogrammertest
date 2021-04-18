@@ -7,7 +7,7 @@
     >
 
     <data class="WheatherDataBinder">
-
+        <import type="com.iprogrammer.modules.loginmodule.view.bindingadapter.BindingAdapterWheatherData" />
 
         <variable
             name="wheatherDataViewModel"
@@ -20,215 +20,224 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:id="@+id/rlText"
+        android:layout_margin="@dimen/dimen_10dp"
 
         >
+
         <TextView
-            android:visibility="visible"
-            android:id="@+id/txtClick"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20sp"
+            android:text="@string/enterCityName" />
+
+        <AutoCompleteTextView
+            android:layout_marginTop="@dimen/dimen_50dp"
+            android:visibility="visible"
+            android:id="@+id/txtCityName"
+            android:ems="10"
+            inputFieldsValidate="@{wheatherDataViewModel}"
             android:textStyle="bold"
-            android:onClick="@{(view) -> wheatherDataViewModel.onDateSelection()}"
-            android:text="Select Date"
             android:layout_centerHorizontal="true"
-            android:textColor="@color/white"
-            android:background="@color/primaryDefault"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:text="@{wheatherDataViewModel.cityName}"
             android:layout_marginBottom="@dimen/dimen_50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+
+
+        <Button
             android:layout_width="@dimen/dimen_100dp"
             android:layout_height="@dimen/dimen_50dp"
-
-
-            />
-
-
-        <TextView
-            android:layout_below="@+id/txtClick"
-            android:id="@+id/txtSelectedDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/btnSearch"
             android:gravity="center"
+            android:textAllCaps="false"
+            android:clickable="true"
+            android:enabled="@{wheatherDataViewModel.isEnable}"
+            android:textColor="@color/white"
+            android:onClick="@{() -> wheatherDataViewModel.searchWheatherData()}"
+            android:background="@color/colorPrimaryDark"
             android:layout_marginBottom="@dimen/dimen_50dp"
             android:layout_centerHorizontal="true"
-            android:textStyle="bold"
-            android:textColor="#000"
-            android:textSize="18sp"
+            android:layout_below="@+id/txtCityName"
+            android:text="@string/search"
             />
 
-     <RelativeLayout
-        android:visibility="gone"
-        android:layout_below="@+id/txtSelectedDate"
-        android:id="@+id/rlView"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_100dp"
-        cardView:cardCornerRadius="3dp"
-        cardView:cardElevation="3dp"
-        android:layout_margin="@dimen/acc_margin_top">
 
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="2dp"
-            card_view:cardBackgroundColor="#fff"
-            card_view:cardCornerRadius="5dp"
-            card_view:cardElevation="4dp"
-            card_view:cardUseCompatPadding="true"
-            >
+            android:id="@+id/rlView"
+            android:visibility="gone"
+            android:background="@drawable/borderlessleft"
+            android:layout_below="@+id/btnSearch"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:layout_marginLeft="@dimen/dimen_30dp"
 
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="4"
+                android:id="@+id/llCity"
+                android:padding="@dimen/acc_margin_top"
                 >
 
-                <LinearLayout
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cityName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18sp"
+                />
+
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_marginTop="@dimen/acc_margin_top"
-                    android:layout_marginLeft="@dimen/dimen_10dp"
-                    >
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen_30dp"
+                    android:text="@{wheatherDataViewModel.cityText}"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="#000">
 
-
-                    <TextView
-                        android:id="@+id/tempText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/appImage"
-                        android:text="Temp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        />
-
-
-                    <TextView
-                        android:id="@+id/txtTemp"
-                        style="@style/Base.TextAppearance.AppCompat.Subhead"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@{wheatherDataViewModel.temp}"
-                        android:textSize="@dimen/dimen_16sp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:textColor="#000">
-
-                    </TextView>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="@dimen/acc_margin_top"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-
-                    >
-
-
-                    <TextView
-                        android:id="@+id/txtDayText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/appImage"
-                        android:text="@string/day"
-                        android:textColor="#000"
-                        android:layout_marginLeft="@dimen/dimen_10dp"
-                        android:textSize="18sp"
-                       />
-
-                    <TextView
-                        android:id="@+id/txtMaxText"
-                        style="@style/Base.TextAppearance.AppCompat.Subhead"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@{wheatherDataViewModel.day}"
-
-                        android:textSize="@dimen/dimen_16sp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:textColor="#000">
-
-                    </TextView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="@dimen/acc_margin_top"
-
-                    android:layout_weight="1"
-
-                    >
-
-
-                    <TextView
-                        android:id="@+id/txtMaxTempText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/max_temp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                        />
-
-                    <TextView
-                        android:id="@+id/txtMaxTemp"
-                        style="@style/Base.TextAppearance.AppCompat.Subhead"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:textColor="#000"
-                        android:text="@{wheatherDataViewModel.maxTemp}"
-                        android:textSize="@dimen/dimen_16sp"
-                        android:textStyle="bold">
-
-                    </TextView>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="@dimen/acc_margin_top"
-
-                    android:layout_weight="1"
-
-                    >
-
-
-                    <TextView
-                        android:id="@+id/txtMinTempText"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/appImage"
-                        android:text="@string/min_temp"
-                        android:textColor="#000"
-                        android:textSize="18sp"
-                      />
-
-                    <TextView
-                        android:id="@+id/txtMinTemp"
-                        style="@style/Base.TextAppearance.AppCompat.Subhead"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@{wheatherDataViewModel.minTemp}"
-                        android:textSize="@dimen/dimen_16sp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:textColor="#000">
-
-                    </TextView>
-                </LinearLayout>
-
-
-
+                </TextView>
 
             </LinearLayout>
 
 
-        </androidx.cardview.widget.CardView>
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llDate"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_below="@+id/llCity"
+                android:padding="@dimen/acc_margin_top"
+
+                >
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtMaxText"
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="@dimen/dimen_30dp"
+                    android:text="@{wheatherDataViewModel.day}"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textColor="#000">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llMaxTemp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_below="@+id/llDate"
+                android:padding="@dimen/acc_margin_top"
+
+                >
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/max_temp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtMaxTemp"
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:layout_marginLeft="@dimen/dimen_30dp"
+                    android:text="@{wheatherDataViewModel.maxTemp}"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold">
+
+
+                </TextView>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/llMinTemp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_below="@+id/llMaxTemp"
+                android:padding="@dimen/acc_margin_top"
+
+                >
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/min_temp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_18sp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/txtMinTemp"
+                    style="@style/Base.TextAppearance.AppCompat.Subhead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="@{wheatherDataViewModel.minTemp}"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:layout_marginLeft="@dimen/dimen_30dp"
+                    android:textColor="#000">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 </layout>

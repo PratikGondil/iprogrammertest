@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_30_dp">30dp</dimen>
+    <dimen name="pagination_distance">60dp</dimen>
+    <dimen name="lottyScale">0.5</dimen>
+    <dimen name="lottyScale_2">0.2</dimen>
+    <dimen name="lottyScale_3">0.3</dimen>
+    <dimen name="btn_height_60_dp">60dp</dimen>
+    <dimen name="dimen_92dp">95dp</dimen>
+    <dimen name="margin_294dp">280dp</dimen>
+    <dimen name="margin_386dp">369dp</dimen>
+    <dimen name="margin_58dp">58dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="height_60dp">57dp</dimen>
+    <dimen name="padding_9dp">9dp</dimen>
+    <dimen name="margin_9dp">9dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="margin_456dp">438dp</dimen>
+    <dimen name="margin_95dp">105dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+    <dimen name="margin_34dp">44dp</dimen>
+    <dimen name="margin_7dp">7dp</dimen>
+    <dimen name="text_12sp">12sp</dimen>
+    <dimen name="margin_24dp">24dp</dimen>
+    <dimen name="margin_57dp">57dp</dimen>
+    <dimen name="text_size_13sp">13sp</dimen>
+
+
+    <!--__________-->
+
+    <dimen name="image_width_height">80dp</dimen>
+
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="top_dist">20dp</dimen>
+    <dimen name="middle_dist">20dp</dimen>
+    <dimen name="menu_margin">10dp</dimen>
+    <dimen name="header_side_margin">20dp</dimen>
+    <dimen name="header_side_margin_half">18dp</dimen>
+    <dimen name="recycler_view_margin_top">5dp</dimen>
+    <dimen name="header_side_margin_half_half">9dp</dimen>
+    <dimen name="header_side_margin_half_half_payee">5dp</dimen>
+    <dimen name="status_bar_height">65px</dimen><!--75-->
+
+    <dimen name="text_padding_alert">3dp</dimen>
+
+    <dimen name="image_logo_margin">15dp</dimen>
+    <dimen name="image_width">140dp</dimen>
+    <dimen name="image_height">140dp</dimen>
+
+    <dimen name="tab_height">55dp</dimen>
+    <dimen name="tab_image_width">20dp</dimen>
+    <dimen name="tab_image_height">20dp</dimen>
+    <dimen name="switch_currency_icon_height_width">30dp</dimen>
+    <dimen name="tab_padding">2dp</dimen>
+    <dimen name="tab_text">12sp</dimen>
+
+    <dimen name="header_one">21sp</dimen>
+    <dimen name="header_two">17sp</dimen>
+    <dimen name="header_five">16sp</dimen>
+    <dimen name="header_three">18sp</dimen>
+    <dimen name="header_four">19sp</dimen>
+
+    <dimen name="passcode_size">12sp</dimen>
+
+    <dimen name="sub_header">15sp</dimen>
+    <dimen name="sub_header_two">13sp</dimen>
+    <dimen name="sub_header_three">12sp</dimen>
+    <dimen name="sub_header_four">11sp</dimen>
+    <dimen name="small_text">12sp</dimen>
+    <dimen name="vsmall_text">10sp</dimen>
+
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="button_text">20sp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_passcode_edit">5dp</dimen>
+
+    <dimen name="rate_spinner_height">90dp</dimen>
+    <dimen name="currency_list_element_height">60dp</dimen>
+    <dimen name="dimens_35dp">50dp</dimen>
+    <dimen name="dimens_35">35dp</dimen>
+    <dimen name="fav_alert_height">180dp</dimen>
+    <dimen name="dimen_70dp">70dp</dimen>
+    <dimen name="fav_alert_image_padding">25dp</dimen>
+    <dimen name="currency_text_size">38sp</dimen>
+    <dimen name="text_padding">5dp</dimen>
+    <dimen name="make_a_transfer_button_width">200dp</dimen>
+    <dimen name="make_another_transfer_button_width">250dp</dimen>
+
+    <dimen name="fav_alert_image_height">20dp</dimen>
+    <dimen name="fav_alert_image_width">20dp</dimen>
+    <dimen name="drawer_image_width">20dp</dimen>
+    <dimen name="drawer_image_height">20dp</dimen>
+
+    <dimen name="select_currency_item_height">70dp</dimen>
+    <dimen name="select_currency_selection_image_width">25dp</dimen>
+    <dimen name="select_currency_selection_image_height">25dp</dimen>
+
+
+    <dimen name="payment_method_ui_element_height">70dp</dimen>
+    <dimen name="height_300dp">300dp</dimen>
+
+    <dimen name="card_width">300dp</dimen>
+    <dimen name="card_height">170dp</dimen>
+    <dimen name="exp_date_width">30dp</dimen>
+
+    <dimen name="rating_bar_height">43dip</dimen>
+    <dimen name="no_card_image">100dp</dimen>
+    <dimen name="passcode_success_header_height">14sp</dimen>
+    <dimen name="passcode_success_text_height">11sp</dimen>
+    <dimen name="profile_image_width_height">70dp</dimen>
+    <dimen name="sub_header_activity">16sp</dimen>
+
+    <dimen name="sign_up_img_height">20dp</dimen>
+    <dimen name="sign_up_img_width">20dp</dimen>
+    <dimen name="sign_up_header">24dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+
+    <dimen name="activity_contarct_margin">16dp</dimen>
+    <dimen name="contract_text_size">14sp</dimen>
+    <dimen name="activity_contract_margin_top">18dp</dimen>
+    <dimen name="btn_payment_details_margin_top">18dp</dimen>
+    <dimen name="button_payment_details_height">70dp</dimen>
+    <dimen name="imp_info_margin_left">20dp</dimen>
+    <dimen name="imp_info_margin_top">16dp</dimen>
+    <dimen name="imp_info_text_size">18sp</dimen>
+    <dimen name="payment_ref_margin_left">20dp</dimen>
+    <dimen name="payment_ref_margin_top">5dp</dimen>
+    <dimen name="text_size_value">17sp</dimen>
+    <dimen name="text_size_header">13sp</dimen>
+
+    <dimen name="history_text_margin_left">20dp</dimen>
+    <dimen name="histo_margin_top">20dp</dimen>
+    <dimen name="histoy_margin_top">5dp</dimen>
+    <dimen name="histoy_margin_top_country">5dp</dimen>
+    <dimen name="margintop_branch_code">16dp</dimen>
+    <dimen name="swift_margin_top">5dp</dimen>
+    <dimen name="swift_code_margin_top">16dp</dimen>
+    <dimen name="acc_margin_top">5dp</dimen>
+    <dimen name="accmar_margin_top">16dp</dimen>
+    <dimen name="small_text_contract">12sp</dimen>
+    <dimen name="contract_text_value">15sp</dimen>
+    <dimen name="history_view_margin">20dp</dimen>
+    <dimen name="imgv_progress_history">10dp</dimen>
+    <dimen name="imgv_progress_history_margin">5dp</dimen>
+    <dimen name="tip_text_size">14sp</dimen>
+    <dimen name="bank_transfer_margin">4dp</dimen>
+    <dimen name="translation_3dp">3dp</dimen>
+
+
+    <dimen name="margin_left_30dp">20dp</dimen>
+    <dimen name="margin_right_30dp">20dp</dimen>
+    <dimen name="padding_60dp">60dp</dimen>
+    <dimen name="container_height_60dp">60dp</dimen>
+    <dimen name="line_height_24sp">24sp</dimen>
+    <dimen name="top_margin_50dp">50dp</dimen>
+    <dimen name="height_95dp">95dp</dimen>
+    <dimen name="text_size_34sp">34sp</dimen>
+    <dimen name="top_margin_19dp">19dp</dimen>
+    <dimen name="margin_21dp">21dp</dimen>
+    <dimen name="height_400dp">400dp</dimen>
+    <dimen name="width_1351dp">351dp</dimen>
+    <dimen name="dimen_100dp">100dp</dimen>
+    <dimen name="dimen_170dp">170dp</dimen>
+    <dimen name="dimen_14dp">14dp</dimen>
+    <dimen name="dimen_39dp">39dp</dimen>
+    <dimen name="dimen_32dp">32dp</dimen>
+    <dimen name="margin_48dp">48dp</dimen>
+    <dimen name="margin_38dp">38dp</dimen>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IProgrammer</string>
+    <string name="countryName">Country</string>
+    <string name="totalcases">Total Cases</string>
+    <string name="deaths">Deaths</string>
+    <string name="recoverd">Recovered</string>
+    <string name="day">Day</string>
+    <string name="max_temp">Max Temp</string>
+    <string name="min_temp">Min Temp</string>
+    <string name="dialogTitle">Oops</string>
+    <string name="dialogMessage">Date is not prime try 05/03/2020</string>
+</resources>

@@ -99,6 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cityName"
+                android:id="@+id/txtCity"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_18sp"
                 />
@@ -138,6 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/date"
+                    android:id="@+id/txtDateText"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_18sp"
                     />
@@ -177,6 +179,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/max_temp"
+                    android:id="@+id/txtMax"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_18sp"
                     />
@@ -217,6 +220,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/min_temp"
+                    android:id="@+id/txtMin"
                     android:textColor="@color/black"
                     android:textSize="@dimen/text_size_18sp"
                     />

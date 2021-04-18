@@ -3,7 +3,6 @@ package com.iprogrammer
 import android.app.Application
 import android.os.Looper
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
@@ -30,12 +29,12 @@ class WheatherDataTest {
     @Before
     fun setUp() {
         MockitoAnnotations.initMocks(this)
-
+/*
         launchFragmentInContainer<WheatherDetailsFragment>(
             fragmentArgs = null, // Bundle
             themeResId = R.style.AppTheme,
             factory = null // FragmentFactory
-                                                     )
+                                                     )*/
         Looper.getMainLooper()
 
         if (Looper.myLooper() == null) {
@@ -48,20 +47,20 @@ class WheatherDataTest {
 
     @Test
     fun checkValidData(){
-        Espresso.onView(ViewMatchers.withId(R.id.tempText)).perform(
+        Espresso.onView(ViewMatchers.withId(R.id.txtCity)).perform(
             ViewActions.replaceText("das"),
             ViewActions.closeSoftKeyboard()
 
                                                                               )
-        Espresso.onView(ViewMatchers.withId(R.id.txtMaxTempText)).perform(
+        Espresso.onView(ViewMatchers.withId(R.id.txtDateText)).perform(
             ViewActions.replaceText("Msd"),
             ViewActions.closeSoftKeyboard()
                                                                                 )
-        Espresso.onView(ViewMatchers.withId(R.id.txtMinTempText)).perform(
+        Espresso.onView(ViewMatchers.withId(R.id.txtMax)).perform(
             ViewActions.replaceText("sads"),
             ViewActions.closeSoftKeyboard()
                                                                                 )
-        Espresso.onView(ViewMatchers.withId(R.id.txtDayText)).perform(
+        Espresso.onView(ViewMatchers.withId(R.id.txtMin)).perform(
             ViewActions.replaceText("sdsad"),
             ViewActions.closeSoftKeyboard()
                                                                                 )
